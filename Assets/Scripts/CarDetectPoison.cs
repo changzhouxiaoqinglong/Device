@@ -27,15 +27,36 @@ public class CarDetectPoison : MonoBehaviour
     public ButtonBase close;
 
 
+    /// <summary>
+    /// 抽气时间
+    /// </summary>
+    public InputField gastime;
 
+    
+    /// <summary>
+    /// 设置按钮
+    /// </summary>
+    public ButtonBase setBtn;
     private void Awake()
     {
         kaiguan.onValueChanged.AddListener(OnKaiGuanValueChanged);
         elec.onValueChanged.AddListener(OnElecValueChanged);
         heatPump.onValueChanged.AddListener(OnHeatPumpValueChanged);
         close.RegistClick(OnClickClose);
+
+        setBtn.RegistClick(OnClickSetBtn);
     }
 
+    private void OnClickSetBtn(GameObject obj)
+    {
+        SetCarPoisonGasTime set = new SetCarPoisonGasTime()
+        {
+            Time = gastime.text.ToFloat(),
+        };
+        NetManager.GetInstance().SendMsg(ServerType.LocalServer, JsonTool.ToJson(set), NetProtocolCode.SET_CAR_POIS_GAS_TIME);
+
+       
+    }
     private void OnClickClose(GameObject obj)
     {
         gameObject.SetActive(false);

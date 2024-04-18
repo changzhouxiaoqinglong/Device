@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PowerPage384 : MonoBehaviour
 {
-    public Toggle output;
+    
 
     public Toggle kaiguan;
 
@@ -18,14 +18,11 @@ public class PowerPage384 : MonoBehaviour
     private void Awake()
     {
         close.RegistClick(OnClickClose);
-        output.onValueChanged.AddListener(OnOutPutValueChanged);
+       
         kaiguan.onValueChanged.AddListener(OnKaiGuanValueChanged);
     }
 
-    private void OnOutPutValueChanged(bool value)
-    {
-        SendOperateMsg(PowerOp384Type.OutPut, value ? 1 : 0); ;
-    }
+   
 
     private void OnKaiGuanValueChanged(bool value)
     {

@@ -37,10 +37,23 @@ public class PoisonAlarmPage106 : MonoBehaviour
 
     public Toggle Elec;
 
+    public Toggle yure;
+
     /// <summary>
     /// 进样情况
     /// </summary>
     public Toggle jinyangStatus;
+
+    /// <summary>
+    /// 减压阀数值
+    /// </summary>
+    public InputField totalDose;
+
+    /// <summary>
+    /// 设置按钮
+    /// </summary>
+    public ButtonBase setBtn;
+
     private void Awake()
     {
         close.RegistClick(OnClickClose);
@@ -52,7 +65,20 @@ public class PoisonAlarmPage106 : MonoBehaviour
         jinyang.onValueChanged.AddListener(OnJinYangValueChanged);
         alarm.onValueChanged.AddListener(OnAlarmValueChanged);
         Elec.onValueChanged.AddListener(OnElecValueChanged);
+        yure.onValueChanged.AddListener(OnyureValueChanged);
         //jinyangStatus.onValueChanged.AddListener(OnInStatusValueChanged);
+
+        setBtn.RegistClick(OnClickSetBtn);
+    }
+
+    private void OnClickSetBtn(GameObject obj)
+    {
+
+        SetReliefThreshold setTotal = new SetReliefThreshold()
+        {
+            ReliefThreshold = totalDose.text.ToFloat(),
+        };
+        NetManager.GetInstance().SendMsg(ServerType.LocalServer, JsonTool.ToJson(setTotal), NetProtocolCode.SET_SetReliefThreshold);
     }
 
     private void OnClickClose(GameObject obj)
@@ -120,6 +146,14 @@ public class PoisonAlarmPage106 : MonoBehaviour
     private void OnElecValueChanged(bool value)
     {
         SendOperateMsg(PoisonAlarmOp106Type.EleOn, value ? 1 : 0);
+    }
+
+    /// <summary>
+    /// 预热
+    /// </summary>
+    private void OnyureValueChanged(bool value)
+    {
+        SendOperateMsg(PoisonAlarmOp106Type.yure, value ? 1 : 0);
     }
 
     /// <summary>

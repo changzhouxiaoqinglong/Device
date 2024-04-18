@@ -28,15 +28,23 @@ public class Page384 : MonoBehaviour
     public ButtonBase powerBtn;
 
     public GameObject powerPage;
+    public ButtonBase diantaiBtn;
 
+    public GameObject diantaiPage;
     private void Awake()
     {
         PoisonAlarm.RegistClick(OnClickPoisonAlarm);
         RadiomeBtn.RegistClick(OnClickRadiomeBtn);
         powerBtn.RegistClick(OnClickPower);
         closeBtn.RegistClick(ClickClose);
+
+        diantaiBtn.RegistClick(OnClickdiantai);
     }
 
+    private void OnClickdiantai(GameObject obj)
+    {
+        diantaiPage.SetActive(true);
+    }
     private void OnClickPoisonAlarm(GameObject obj)
     {
         poisonPage.SetActive(true);

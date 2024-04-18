@@ -96,6 +96,11 @@ public class NetProtocolCode
     public const int POWER_OP = 2041;
 
     /// <summary>
+    /// 操作电台
+    /// </summary>
+    public const int RadioStation_OP = 2071;
+
+    /// <summary>
     /// 操作北斗
     /// </summary>
     public const int BEIDOU_OP = 2051;
@@ -284,6 +289,11 @@ public class NetProtocolCode
     public const int POWER_102 = 10251;
 
     /// <summary>
+    /// 操作电台
+    /// </summary>
+    public const int RadioStation_OP_102 = 10271;
+
+    /// <summary>
     /// 气象器件
     /// </summary>
     public const int METEOR_102 = 10261;
@@ -325,6 +335,10 @@ public class NetProtocolCode
     /// </summary>
     public const int POWER_OP_384 = 38431;
 
+    /// <summary>
+    /// 操作电台
+    /// </summary>
+    public const int RadioStation_OP_384 = 38471;
 
     #endregion
 
@@ -333,6 +347,11 @@ public class NetProtocolCode
     /// 操作电源106
     /// </summary>
     public const int POWER_OP_106 = 10641;
+
+    /// <summary>
+    /// 操作电台
+    /// </summary>
+    public const int RadioStation_OP_106 = 10671;
 
     /// <summary>
     /// 操作106辐射仪
@@ -368,6 +387,13 @@ public class NetProtocolCode
     /// 106毒剂报警器训练流程  可控状态设置
     /// </summary>
     public const int POISON_ALARM_STAT_CTR_106 = 10612;
+
+
+    /// <summary>
+    /// 设置减压阀数据
+    /// </summary>
+    public const int SET_SetReliefThreshold = 10681;
+
     #endregion
 
     #endregion

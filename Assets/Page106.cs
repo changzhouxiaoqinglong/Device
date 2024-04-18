@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Page106 : MonoBehaviour
 {
     /// <summary>
@@ -36,7 +36,11 @@ public class Page106 : MonoBehaviour
     public ButtonBase BiologyeBtn;
 
     public GameObject BiologyPage;
+    public ButtonBase diantaiBtn;
 
+    public GameObject diantaiPage;
+
+    
     private void Awake()
     {
         powerBtn.RegistClick(OnClickPower);
@@ -44,6 +48,16 @@ public class Page106 : MonoBehaviour
         PoisonAlarm.RegistClick(OnClickPoisonAlarm);
         RadiomeBtn.RegistClick(OnClickRadiomeBtn);
         BiologyeBtn.RegistClick(OnClickBiologyBtn);
+        diantaiBtn.RegistClick(OnClickdiantai);
+       
+    }
+
+
+  
+
+    private void OnClickdiantai(GameObject obj)
+    {
+        diantaiPage.SetActive(true);
     }
 
 

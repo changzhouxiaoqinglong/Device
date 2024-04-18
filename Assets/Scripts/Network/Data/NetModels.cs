@@ -154,7 +154,34 @@ public class PowerOpType
     public const int output = 3;
 }
 
+#region 电台
+public class RadioStationOpType
+{
+    /// <summary>
+    /// 开关
+    /// </summary>
+    public const int OpenClose = 1;
+}
 
+
+/// <summary>
+/// 操作电台
+/// </summary>
+public class RadioStationOpModel 
+{
+    /// <summary>
+    /// 操作 0关  1开
+    /// </summary>
+    public int Operate;
+
+    /// <summary>
+    /// 操作类型
+    /// </summary>
+    public int Type;
+
+ 
+}
+#endregion
 
 /// <summary>
 /// 操作北斗
@@ -253,6 +280,29 @@ public class SetDoseThreshold
     /// 剂量率阈值
     /// </summary>
     public float DoseThreshold;
+}
+
+/// <summary>
+/// 设置车载侦毒器抽气时间
+/// </summary>
+public class SetCarPoisonGasTime
+{
+    /// <summary>
+    /// 时间 
+    /// </summary>
+    public float Time;
+}
+
+
+/// <summary>
+/// 设置减压阀数据
+/// </summary>
+public class SetReliefThreshold
+{
+    /// <summary>
+    /// 减压阀数据
+    /// </summary>
+    public float ReliefThreshold;
 }
 
 /// <summary>
@@ -689,15 +739,12 @@ public class InfaredTelemetryDrug
 /// </summary>
 public class PowerOpType102
 {
-    /// <summary>
-    /// 输出
-    /// </summary>
-    public const int OutPut = 1;
+   
 
     /// <summary>
     /// 开关机
     /// </summary>
-    public const int OpenClose = 2;
+    public const int OpenClose = 1;
 }
 
 /// <summary>
@@ -766,6 +813,34 @@ public class SetTTRadiomThreShold102Model
 {
     public float TotalDoseTreshold;
 }
+
+
+#region 102电台
+public class RadioStationOpType102
+{
+    /// <summary>
+    /// 开关
+    /// </summary>
+    public const int OpenClose = 1;
+}
+
+
+/// <summary>
+/// 操作电台
+/// </summary>
+public class RadioStationOp102Model 
+{
+    /// <summary>
+    /// 操作 0关  1开
+    /// </summary>
+    public int Operate;
+
+    /// <summary>
+    /// 操作类型
+    /// </summary>
+    public int Type;
+}
+#endregion
 
 
 #region 384车载辐射仪
@@ -997,6 +1072,36 @@ public class PowerOp384Model
 
 #endregion
 
+#region 384电台
+public class RadioStationOpType384
+{
+    /// <summary>
+    /// 开关
+    /// </summary>
+    public const int OpenClose = 1;
+}
+
+
+/// <summary>
+/// 操作电台
+/// </summary>
+public class RadioStationOp384Model 
+{
+    /// <summary>
+    /// 操作 0关  1开
+    /// </summary>
+    public int Operate;
+
+    /// <summary>
+    /// 操作类型
+    /// </summary>
+    public int Type;
+
+  
+}
+#endregion
+
+
 
 #region 操作电源 106
 
@@ -1115,12 +1220,17 @@ public class PoisonAlarmOp106Type
     /// <summary>
     /// 上电
     /// </summary>
-    public const int EleOn = 7;
+    public const int EleOn = 8;
 
     /// <summary>
     /// 自检
     /// </summary>
-    public const int Check = 8;
+    public const int Check = 9;
+
+    /// <summary>
+    /// 预热
+    /// </summary>
+    public const int yure = 7;
 }
 
 /// <summary>
@@ -1173,5 +1283,32 @@ public class BiologyOp106Model
 public class SetBiologyThreShold106Model
 {
     public float BiologicalData;
+}
+#endregion
+
+#region 106电台
+public class RadioStationOpType106
+{
+    /// <summary>
+    /// 开关
+    /// </summary>
+    public const int OpenClose = 1;
+}
+
+
+/// <summary>
+/// 操作电台
+/// </summary>
+public class RadioStationOp106Model
+{
+    /// <summary>
+    /// 操作 0关  1开
+    /// </summary>
+    public int Operate;
+
+    /// <summary>
+    /// 操作类型
+    /// </summary>
+    public int Type;
 }
 #endregion

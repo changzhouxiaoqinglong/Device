@@ -21,7 +21,7 @@ public class PowerPage102 : MonoBehaviour
 
     private void OnOutPutValueChanged(bool value)
     {
-        SendOperateMsg(PowerOpType102.OutPut, value ? 1 : 0); ;
+        SendOperateMsg(PowerOpType102.OpenClose, value ? 1 : 0); ;
     }
 
     /// <summary>

@@ -44,6 +44,10 @@ public class Page102 : MonoBehaviour
     public ButtonBase meteo;
     public GameObject meteoPage;
 
+    public ButtonBase diantaiBtn;
+
+    public GameObject diantaiPage;
+
     private void Awake()
     {
         RadiomBtn.RegistClick(OnClickRadiom);
@@ -53,6 +57,13 @@ public class Page102 : MonoBehaviour
         telemerty.RegistClick(OnClickTelemetry);
         power.RegistClick(OnClickPower);
         meteo.RegistClick(OnClickMeteo);
+
+        diantaiBtn.RegistClick(OnClickdiantai);
+    }
+
+    private void OnClickdiantai(GameObject obj)
+    {
+        diantaiPage.SetActive(true);
     }
 
     private void OnClickRadiom(GameObject obj)

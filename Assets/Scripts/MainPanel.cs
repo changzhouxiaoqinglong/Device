@@ -52,6 +52,11 @@ public class MainPanel : MonoBehaviour
     public ButtonBase carDetect;
 
     public GameObject carDetectPage;
+
+    public ButtonBase diantaiBtn;
+
+    public GameObject diantaiPage;
+
     private void Awake()
     {
         PoisonAlarm.RegistClick(OnClickPoisonAlarm);
@@ -60,7 +65,9 @@ public class MainPanel : MonoBehaviour
         beiDouBtn.RegistClick(OnClickBeiDou);
         meteorBtn.RegistClick(OnClickMetero);
         carDetect.RegistClick(OnClickCarDetect);
+        diantaiBtn.RegistClick(OnClickdiantai);
         closeBtn.RegistClick(ClickClose);
+
     }
 
     private void OnClickPoisonAlarm(GameObject obj)
@@ -91,6 +98,11 @@ public class MainPanel : MonoBehaviour
     private void OnClickCarDetect(GameObject obj)
     {
         carDetectPage.SetActive(true);
+    }
+
+    private void OnClickdiantai(GameObject obj)
+    {
+        diantaiPage.SetActive(true);
     }
 
     private void ClickClose(GameObject obj)
