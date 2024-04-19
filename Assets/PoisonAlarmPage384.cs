@@ -70,7 +70,7 @@ public class PoisonAlarmPage384 : MonoBehaviour
     /// </summary>
     private void OnKaiGuanValueChanged(bool value)
     {
-        SendOperateMsg(PoisonAlarmOp384Type.OpenStatus, value ? 2 : 0);
+        SendOperateMsg(PoisonAlarmOp384Type.OpenStatus, value ? 1 : 0);
     }
 
     /// <summary>
@@ -82,19 +82,19 @@ public class PoisonAlarmPage384 : MonoBehaviour
     }
 
     /// <summary>
-    /// 地面加热
+    /// 地面探头打开
     /// </summary>
     private void OnGroundHotValueChanged(bool value)
     {
-        SendOperateMsg(PoisonAlarmOp384Type.GroundProbHeat, value ? 1 : 0);
+        SendOperateMsg(PoisonAlarmOp384Type.GroundProbOpen, value ? 1 : 0);
     }
 
     /// <summary>
-    /// 地面加热
+    /// 空气探头打开
     /// </summary>
     private void OnAirHotValueChanged(bool value)
     {
-        SendOperateMsg(PoisonAlarmOp384Type.AirProbHeat, value ? 1 : 0);
+        SendOperateMsg(PoisonAlarmOp384Type.AirProbOpen, value ? 1 : 0);
     }
 
     /// <summary>
@@ -102,7 +102,7 @@ public class PoisonAlarmPage384 : MonoBehaviour
     /// </summary>
     private void OnElecValueChanged(bool value)
     {
-        SendOperateMsg(PoisonAlarmOp384Type.EleOn, value ? 1 : 0);
+       // SendOperateMsg(PoisonAlarmOp384Type.EleOn, value ? 1 : 0);
     }
 
     /// <summary>

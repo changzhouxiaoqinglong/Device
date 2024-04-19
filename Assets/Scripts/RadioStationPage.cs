@@ -26,12 +26,12 @@ public Toggle kaiguan;
     /// </summary>
     private void OnKaiGuanValueChanged(bool value)
     {
-        RadioStationOp102Model opModel = new RadioStationOp102Model()
+        RadioStationOpModel opModel = new RadioStationOpModel()
         {
             Operate = value ? 1 : 0,
-            Type = RadioStationOpType102.OpenClose,
+            Type = RadioStationOpType.OpenClose,
         };
-        NetManager.GetInstance().SendMsg(ServerType.LocalServer, JsonTool.ToJson(opModel), NetProtocolCode.RadioStation_OP_102);
+        NetManager.GetInstance().SendMsg(ServerType.LocalServer, JsonTool.ToJson(opModel), NetProtocolCode.RadioStation_OP);
     }
 
    

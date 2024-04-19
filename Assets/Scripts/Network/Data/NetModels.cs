@@ -934,7 +934,12 @@ public class PoisonAlarmOp384Type
     /// <summary>
     /// 上电
     /// </summary>
-    public const int EleOn = 1;
+   // public const int EleOn = 1;
+
+    /// <summary>
+    /// 开关
+    /// </summary>
+    public const int OpenStatus = 1;
 
     /// <summary>
     /// 空气进样
@@ -957,19 +962,24 @@ public class PoisonAlarmOp384Type
     public const int GroundProbHeat = 5;
 
     /// <summary>
-    /// 故障
+    /// 空气探头打开
     /// </summary>
-    public const int Error = 6;
+    public const int AirProbOpen = 6;
 
     /// <summary>
-    /// 状态
+    /// 地面探头打开
     /// </summary>
-    public const int OpenStatus = 7;
+    public const int GroundProbOpen = 7;
+
+    /// <summary>
+    /// 故障
+    /// </summary>
+    public const int Error = 8;
 
     /// <summary>
     /// 报警
     /// </summary>
-    public const int Alarm = 8;
+    public const int Alarm = 9;
 }
 
 /// <summary>
